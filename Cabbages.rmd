@@ -78,10 +78,9 @@ Cultivation method 39 has a mean of 51.5 vitamin C content, while cultivation me
 
 ```
 
-The p value is equal to 0.00000003405. This p value is lower than 0.05, so we reject the null hypothesis. This means that there is a difference in the average number of vitamin C in mehtod C39 and C52.
+The p value is equal to 0.00000003405. This p value is lower than 0.05, so we reject the null hypothesis- there is a difference in the average number of vitamin C between method C39 and C52.
 
 
 # Discussion and Conclusion
 
-The original question was if there was a difference in the average vitamin C content in cultivation method 39 and method 52? There is indeed a difference. We can see this in our numerical and graphical results; as it shows the average vitamin C in C39 was 51.5, and C52 was 64.4. We can also find that there is a difference in our P value, as it was lower than 0.05, so we rejected the null hypothesis. 
-In conclusion, cultivation method 52 provided more vitamin C in the cabbages on average compared to cultivation method 39. 
+There is a difference between the vitamins in our numerical and graphical results. The cultivation method 52 provided more vitamin C in the cabbages on average compared to cultivation method 39. The data shows the average vitamin C in C39 was 51.5, and C52 was 64.4. The p value is lower than 0.05, so we reject the null hypothesis. The cultivation method 52 provided more vitamin C in the cabbages on average compared to cultivation method 39. 
