@@ -19,27 +19,57 @@ library(dplyr)
 # Introduction
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
- The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
+ 
+The cabbages data from the MASS package is loaded into a dataframe called veggy. We need to find out if there is a difference in average VitC between c39 and c52 cultivation methods.
  
 ### Is there a difference in average VitC between c39 and c52 cultivation methods?  
 
+$H_0$ There is no difference in the vitamin C content of cabbages based on cultivation method.
+
+$H_A$ There is a difference in the vitamin C content of cabbages based on the cultivation method.
+
 # Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+```{r}
+data = veggy
+```
+
+Vitamin C content is a numerical variable, and cultivation method is a categorical variable. Therefore, we use the Numerical-Cat helper file.
 
 # Results
-
-<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
-
 ## Descriptive Results
 
+# Results
 ### Graphical Descriptive Results
 
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+ggplot(data, aes(x = Cult, y = VitC)) +
+  geom_boxplot() +
+  labs(x = "Cult", y = "VitC") +
+  theme_minimal()
+
+```
+
+The box plot shows that there is a difference in vitamin C content in method C52 and C39. The median of vitamin C in C52 is higher than the median of vitamin C in C39 by around 15 IUs.
+
 
 ### Numerical Descriptive Results
 
-<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+num_summary <- data %>%
+  group_by(Cult) %>%
+  summarise(
+    Mean = mean(VitC),
+    Median = median(VitC),
+    SD = sd(VitC)
+  )
+
+num_summary
+
+```
+
+Cultivation method 39 has a mean of 51.5 vitamin C content, while cultivation method 52 has an mean of 64.4 vitamin C content.
+
 
 ## Inferential Results
 
