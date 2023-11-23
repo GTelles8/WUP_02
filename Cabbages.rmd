@@ -1,7 +1,7 @@
 ---
 title: "Cabbages"
-author: "Put your name here!"
-date: "put the date here"
+author: "Gracie Telles"
+date: "Fall 2023"
 output:
   html_document:
     df_print: paged
@@ -12,6 +12,8 @@ require(tidyverse)
 require(tigerstats)
 require(MASS)
 veggy <- cabbages
+library(ggplot2)
+library(dplyr)
 ```
 
 # Introduction
